@@ -1,0 +1,24 @@
+import NavBar from "./NavBar"; // Import the NavBar component
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+function About() {
+    const nav = useNavigate(); // Navigate function from react-router-dom
+
+    useEffect(() => {
+        let un = localStorage.getItem("username");
+        if (un == null)
+            nav("/login"); // Redirect to login page if username is not found in localStorage
+    }, []);
+
+    return (
+        <>
+            <center>
+                <NavBar /> {/* Render the NavBar component */}
+                <h1>About Page</h1> {/* Heading for the About page */}
+            </center>
+        </>
+    );
+}
+
+export default About; // Export the About component

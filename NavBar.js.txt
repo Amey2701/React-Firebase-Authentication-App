@@ -1,0 +1,32 @@
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+function NavBar() {
+    const [username, setUsername] = useState(""); // State to hold username
+
+    useEffect(() => {
+        setUsername(localStorage.getItem("username")); // Set username from localStorage on component mount
+    }, []);
+
+    return (
+        <div className="nav">
+            {/* Render navigation links based on username presence */}
+            {username === null && (
+                <>
+                    <Link to="/">Login</Link>
+                    <Link to="/signup">Signup</Link>
+                    <Link to="/fp">Forgot Password</Link>
+                </>
+            )}
+            {username !== null && (
+                <>
+                    <Link to="/home">Home</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/cp">Change Password</Link>
+                </>
+            )}
+        </div>
+    );
+}
+
+export default NavBar;
