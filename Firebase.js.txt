@@ -1,33 +1,16 @@
-// Import the functions you need from the SDKs you need
+// Firebase.js
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// For example, you can import additional Firebase services like Firestore, Auth, etc.
-// See available libraries: https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  // Replace with your Firebase project's API key
-  apiKey: "AIzaSyC4yWimKralxalFholiaBbfBbkpM25_cTk",
-
-  // Replace with your Firebase project's authentication domain
-  authDomain: "ameyrfbauth1706.firebaseapp.com",
-
-  // Replace with your Firebase project's unique project ID
-  projectId: "ameyrfbauth1706",
-
-  // Replace with your Firebase project's default storage bucket
-  storageBucket: "ameyrfbauth1706.appspot.com",
-
-  // Replace with your Firebase project's unique messaging sender ID
-  messagingSenderId: "960480908171",
-
-  // Replace with your Firebase project's unique app ID
-  appId: "1:960480908171:web:d397211dd797ef592b958e"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Export the initialized Firebase app to make it available for use in other parts of your application
+export const auth = getAuth(app);
 export default app;
