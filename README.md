@@ -1,6 +1,9 @@
 # React Firebase Authentication App
 
-This project is a React application with Firebase authentication integration, providing functionalities such as login, signup, password reset, and password change. The navigation is managed using `react-router-dom`.
+- This project is a React application with Firebase authentication integration, providing functionalities such as login, signup, password reset, and password change.
+- The navigation is managed using `react-router-dom`.
+- Project can be seen on this link :- https://ameyrfbauth1706.web.app
+
 
 ## Features
 
