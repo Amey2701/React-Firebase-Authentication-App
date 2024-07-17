@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "ameyreactauth",
+    "build": "ameyreactauth"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
